@@ -1,8 +1,19 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import Perf from 'react-addons-perf';
+if(typeof window !== 'undefined') {
+    window.Perf = Perf;
+}
 class App extends Component {
+
+  componentDidMount() {
+          debugger;
+          Perf.start();
+          //Perf.getLastMeasurements();
+          Perf.printWasted();
+  }
+
   render() {
     return (
       <div className="App">
