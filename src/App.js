@@ -1,18 +1,44 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Perf from 'react-addons-perf';
-if(typeof window !== 'undefined') {
-    window.Perf = Perf;
-}
+
+//----Option 1 React Perf------
+//import Perf from 'react-addons-perf';
+// if(typeof window !== 'undefined') {
+//     window.Perf = Perf;
+// }
+//----Option 1------
+
+
+//----Option 2  React Performance Devtool------
+const registerObserver = require('react-perf-devtool')
+  const options = {
+    shouldLog: true,
+    port: 8080
+  }
+  function callback(measures) {
+    // do something with the measures
+  }
+   registerObserver(options, callback)
+//----Option 2------
+
 class App extends Component {
 
-  componentDidMount() {
-          debugger;
-          Perf.start();
-          //Perf.getLastMeasurements();
-          Perf.printWasted();
-  }
+
+
+
+
+
+  //----Option 1------
+  //componentDidMount() {
+          // debugger;
+          // Perf.start();
+          // //Perf.getLastMeasurements();
+          // Perf.printWasted();
+  //}
+  //----Option 1------
+
+
 
   render() {
     return (
