@@ -11,7 +11,7 @@ import './App.css';
 
 const registerObserver = require("react-perf-devtool")
 
-registerObserver()
+//registerObserver()
 
 // For example - You can pass an `option` object as an argument to `registerObserver` for logging
 // the measures to the console or you can pass a callback which receives parsed measures as its argument.
