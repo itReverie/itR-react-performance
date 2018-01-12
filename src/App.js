@@ -17,7 +17,6 @@ registerObserver()
 // the measures to the console or you can pass a callback which receives parsed measures as its argument.
 // Don't worry, everything is given in the documentation. Still, I have written an example below that may be helpful for you 😄
 
-/**
 
 const options = {
   shouldLog: true,
@@ -26,11 +25,12 @@ const options = {
 
 function callback(measures) {
   // do something with these measures. Send to Googel Analytics Dashboard for further analysis ??
+  console.log(measures);
 }
 
 // Now pass options and callback to registerObserver hook 😄
 registerObserver(options, callback)
-*/
+
 
 // Now you can start the server using `yarn start` (assuming this cmd is in your scripts) and open the devtool.
 // Refresh the devtool and it should show the measures ✅.
