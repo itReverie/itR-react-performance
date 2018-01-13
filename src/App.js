@@ -25,7 +25,7 @@ const options = {
 
 function callback(measures) {
   // do something with these measures. Send to Googel Analytics Dashboard for further analysis ??
-  console.log(measures);
+  console.table(measures);
 }
 
 // Now pass options and callback to registerObserver hook 😄
